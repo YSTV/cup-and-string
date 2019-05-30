@@ -51,7 +51,6 @@ func (b *Talkiepi) initGPIO() {
 	// then we can do our gpio stuff
 	b.OnlineLED = gpio.NewOutput(OnlineLEDPin, false)
 	b.ParticipantsLED = gpio.NewOutput(ParticipantsLEDPin, false)
-	b.TransmitLED = gpio.NewOutput(TransmitLEDPin, false)
 }
 
 func (b *Talkiepi) LEDOn(LED gpio.Pin) {
@@ -77,5 +76,4 @@ func (b *Talkiepi) LEDOffAll() {
 
 	b.LEDOff(b.OnlineLED)
 	b.LEDOff(b.ParticipantsLED)
-	b.LEDOff(b.TransmitLED)
 }
