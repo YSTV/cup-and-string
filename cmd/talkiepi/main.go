@@ -57,12 +57,6 @@ func main() {
 		var configFile ConfigFile
 
 		json.Unmarshal(byteValue, &configFile)
-		fmt.Println(configFile.Server)
-		fmt.Println(configFile.Username)
-		fmt.Println(configFile.Password)
-		fmt.Println(configFile.Insecure)
-		fmt.Println(configFile.Certificate)
-		fmt.Println(configFile.Channel)
 
 		*server = configFile.Server
 		*username = configFile.Username
